@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>电影</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+
+        body {
+            padding-top: 50px;
+            padding-bottom: 40px;
+            color: #5a5a5a;
+        }
+
+        
+
+        .carousel {
+            height: 500px;
+            margin-bottom: 60px;
+        }
+
+        .carousel .item {
+            height: 500px;
+            background-color: #000;
+        }
+
+        .carousel .item img {
+            width: 100%;
+        }
+
+        .carousel-caption {
+            z-index: 10;
+        }
+
+        .carousel-caption p {
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        
+
+        .summary {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .summary .col-md-4 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        
+
+        .feature-divider {
+            margin: 40px 0;
+        }
+
+        .feature {
+            padding: 30px 0;
+        }
+
+        .feature-heading {
+            font-size: 50px;
+            color: #2a6496;
+        }
+
+        .feature-heading .text-muted {
+            font-size: 28px;
+        }
+
+        
+
+        @media (max-width: 768px) {
+
+            .summary {
+                padding-right: 3px;
+                padding-left: 3px;
+            }
+
+            .carousel {
+                height: 300px;
+                margin-bottom: 30px;
+            }
+
+            .carousel .item {
+                height: 300px;
+            }
+
+            .carousel img {
+                min-height: 300px;
+            }
+
+            .carousel-caption p {
+                font-size: 16px;
+                line-height: 1.4;
+            }
+
+            .feature-heading {
+                font-size: 34px;
+            }
+
+            .feature-heading .text-muted {
+                font-size: 22px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .feature-heading {
+                margin-top: 120px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+<!-- 顶部导航 -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">最新电影</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#ad-carousel">综述</a></li>
+                <li><a href="#summary-container">简述</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">电影 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#feature-tab" data-tab="tab-chrome">泰山归来</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-firefox">天亮之前</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-safari">哆啦A梦</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-opera">大鱼海棠</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-ie">巴霍巴利王</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" data-toggle="modal" data-target="#about-modal">关于</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- 广告轮播 -->
+<div id="ad-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#ad-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#ad-carousel" data-slide-to="1"></li>
+        <li data-target="#ad-carousel" data-slide-to="2"></li>
+        <li data-target="#ad-carousel" data-slide-to="3"></li>
+        <li data-target="#ad-carousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="images/1.jpg" alt="1 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                  
+
+                   
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/2.jpg" alt="2 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                   
+
+                    
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/3.jpg" alt="3 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                   
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/4.jpg" alt="4 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                  
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/5.jpg" alt="5 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#ad-carousel" data-slide="prev"><span
+            class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+
+
+<!-- 主要内容 -->
+<div class="container summary">
+
+    <!-- 简介 -->
+    <div class="row" id="summary-container">
+        <div class="col-md-4">
+            <img class="img-circle" src="images/1-1.jpg" alt="chrome">
+
+            <h2>泰山归来</h2>
+
+          
+
+            <p><a class="btn btn-default" href="#" role="button">订票</a></p>
+        </div>
+        <div class="col-md-4">
+            <img class="img-circle" src="images/1-2.jpg" alt="firefox">
+
+            <h2>大鱼海棠</h2>
+
+            
+
+            <p><a class="btn btn-default" href="#" role="button">订票</a></p>
+        </div>
+        <div class="col-md-4">
+            <img class="img-circle" src="images/1-3.jpg" alt="safari">
+
+            <h2>寒战2</h2>
+
+            
+
+            <p><a class="btn btn-default" href="#" role="button">订票</a></p>
+        </div>
+    </div>
+
+    <!-- 特性 -->
+
+    <hr class="feature-divider">
+
+    <ul class="nav nav-tabs" role="tablist" id="feature-tab">
+        <li class="active"><a href="#tab-chrome" role="tab" data-toggle="tab">泰山归来</a></li>
+        <li><a href="#tab-firefox" role="tab" data-toggle="tab">大鱼海棠</a></li>
+        <li><a href="#tab-safari" role="tab" data-toggle="tab">寒战2</a></li>
+        <li><a href="#tab-opera" role="tab" data-toggle="tab">陆垚指马利</a></li>
+        <li><a href="#tab-ie" role="tab" data-toggle="tab">巴霍巴利王</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab-chrome">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">泰山归来 <span
+                            class="text-muted">万兽齐奔的时候还有点小感动</span></h2>
+
+                    <p class="lead">19世纪80年代，泰山（亚历山大·斯卡斯加德饰）已经离开了刚果丛林十年了，他与心爱的简·波特（玛歌特·罗比饰）在维多利亚女王时代的英国伦敦生活。看似平静的城市生活对泰山来说并非真的自在，甚至感到窒息，身着考究的礼服，住在豪宅里，却找不到家的感觉。一次，他以英国议会贸易大使的身份重新回到刚果，但这次派遣实际上是一次比利时人里昂·罗姆（克里斯托弗·瓦尔兹饰）的阴谋。泰山、珍以及他的朋友们都陷入了危险，但丛林是泰山的天下，他开始重新飞檐走壁，拯救爱人和朋友。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/1-1.jpg"
+                         alt="Chrome">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-firefox">
+            <div class="row feature">
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/1-2.jpg"
+                         alt="Firefox">
+                </div>
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">大鱼海棠 <span class="text-muted">挑剧情bug成为最大的乐趣</span>
+                    </h2>
+
+                    <p class="lead">该剧的创意来源于庄子的“北冥有鱼，其名为鲲。鲲之大，不知其几千里也”，讲述了一个属于中国人的奇幻故事，影片试图向观众展现那条游弋在每个中国人血液和灵魂中的大鱼——鲲。</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-safari">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">寒战2 <span class="text-muted">近几年还能看的下去的警匪剧</span></h2>
+
+                    <p class="lead">冲锋车案件主谋李家俊（彭于晏 饰）设计逃脱警方控制，与幕后黑手汇合，联手策划更大阴谋。而现警务处长刘杰辉（郭富城 饰），前警务副处长李文彬（梁家辉 饰），和资深大律师简奥伟（周润发 饰）被卷入其中，香港将面临更加大的危机……</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/1-3.jpg"
+                         alt="Safari">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-opera">
+            <div class="row feature">
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/1-4.jpg"
+                         alt="Opera">
+                </div>
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">陆垚知马利 <span class="text-muted">奔着宋佳去的，好美好美</span>
+                    </h2>
+
+                    <p class="lead">电影讲述了陆垚（包贝尔饰）在上大学时重逢幼儿园同学马俐（宋佳饰），虽然彼此心存好感，但由于陆垚有严重的“表白障碍症”，只能眼巴巴看着自己的女神马俐与别人谈恋爱。而自此之后很多年，陆垚只能以朋友的名义爱着马俐，也与她开始了一段“友情不甘、恋人不敢”的长跑。.</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-ie">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">巴霍巴利王 <span class="text-muted">一言不合就开挂</span></h2>
+
+                    <p class="lead">《巴霍巴利王：开端》改编自印度神话传说，讲述一名信仰湿婆的青年施瓦（Sivudu），从与世隔绝的瀑布下村落，一步一步攀爬至瀑布顶端，在新世界的冒险过程中逐渐发现自己身世，从而引出一段父辈巴霍巴利（Baahubali）与同襟兄弟巴哈拉拉德瓦（Bhallaladeva）二人争夺摩西施末底（Mahishmathi）王国王位的恩怨往事。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/1-5.jpg"
+                         alt="IE">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 关于 -->
+    <div class="modal fade" id="about-modal" tabindex="-1" role="dialog" aria-labelledby="modal-label"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                    <h4 class="modal-title" id="modal-label">关于</h4>
+                </div>
+                <div class="modal-body">
+                    <p>电影，也称映画。是由活动照相术和幻灯放映术结合发展起来的一种现代艺术。是一门可以容纳文学戏剧、摄影、绘画、音乐、舞蹈、文字、雕塑、建筑等多种艺术的综合艺术，但它又具有独自的艺术特征。电影在艺术表现力上不但具有其它各种艺术的特征，又因可以运用蒙太奇这种艺术性极强的电影组接技巧，具有超越其它一切艺术的表现手段，而且影片可以大量复制放映。</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">了解了</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p class="pull-right"><a href="#top">回到顶部</a></p>
+
+        <p>&copy; 2016 </p>
+    </footer>
+
+</div>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('#ad-carousel').carousel();
+        $('#menu-nav .navbar-collapse a').click(function (e) {
+            var href = $(this).attr('href');
+            var tabId = $(this).attr('data-tab');
+            if ('#' !== href) {
+                e.preventDefault();
+                $(document).scrollTop($(href).offset().top - 70);
+                if (tabId) {
+                    $('#feature-tab a[href=#' + tabId + ']').tab('show');
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
