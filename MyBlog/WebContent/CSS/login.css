@@ -1,0 +1,50 @@
+body {
+    margin:0 auto;width:1024px;height:auto;
+}
+#login_header{
+    font-size:13px;margin-top:10px;
+}
+#login_header_float{
+    float:left;
+}
+#login_header_float2{
+    margin-left:400px;clear:right;
+}
+
+#logo_title{
+    margin-top:20px;
+}
+
+#register_context{
+    font-size:15px;line-height:70px;margin-left:500px;margin-top:40px;
+}
+
+.format{
+    text-align:right;
+}
+.format2{
+  margin-left:50px;
+}
+span{
+    color:red;
+}
+
+#total{
+   border-style:outset;margin-top:50px;clear:right;height: 280px;
+}
+.foot{
+    margin-top:100px;
+    font-size:small;
+    text-align:center;
+    margin-bottom:80px;
+}
+a:link { 
+    text-decoration: none;color: blue;
+
+} a:hover { 
+    text-decoration:underline;color: red;
+
+}  a:visited { 
+    text-decoration: none;color: green;
+
+}
